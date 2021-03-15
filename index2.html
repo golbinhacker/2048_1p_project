@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>공일 2048 봇</title>
+
+    <link href="style/main2.css" rel="stylesheet" type="text/css">
+    <link href="style/ai.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+
+</head>
+
+<body>
+
+    <div style="float: left; width: 100%; margin-top: -35px;">
+        <div class="container" style="margin-left:100px ; width: 600px;">
+            <div class="heading" style="height: 60px;">
+                <h1 class="title" style="font-size:2.3rem; margin-top: 8px;">공업일반 1인 1프로젝트</h1>
+
+                <div class="score-container" style="box-shadow: 3px 3px 3px 3px rgb(206, 206, 206);">0</div>
+            </div>
+            <p style="margin-top: 20px; width: 1000px;">원하는 속도에 맞게 숫자를 입력하세요. (자연수만 가능하며, <strong style="color: red;">숫자가 작을수록 빨라집니다. <br>게임 진행중에 다크/라이트 버튼을 사용하면 초기화됩니다.</strong>)</p>
+            <p class="game-intro">봇을 만들어봤자 전다예는 못이긴다</p>
+
+            <div class='controls' style="margin-top:50px;margin-bottom:-30px ;">
+                <div id='run-button-container'>
+                    <span style="font-size: 1.5rem;"> 속도 지정: </span>
+                    <input id="run-count" style="width: 70px; font-size: 1.2rem; text-align: right; height: 30px; border-radius: 5px; padding-right: 7px;" type="text" value="100">
+
+                </div>
+
+                <div id='hint-button-container'>
+                    <button id='hint-button' class='ai-button'>Next move</button>
+                </div>
+                <div id='feedback-container'> </div>
+            </div>
+
+
+            <div class="game-container" style="">
+                <div class="game-message">
+                    <p></p>
+                    <div class="lower">
+                        <a class="retry-button">다시하기</a>
+                        <div class="score-sharing"></div>
+                    </div>
+                </div>
+
+                <div class="grid-container">
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+
+                <div class="tile-container">
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+                    <div class="tile tile-2 tile-position-1-1"></div>
+
+                </div>
+
+
+            </div>
+            <a href="index.html" style="color: #FAF8F0;;">
+                <div class="button-container-1" style="position: absolute; left: 1500px; bottom: 850px;">
+                    <span class="mas" style="background-color: #30231C; padding: 17%; position: absolute; bottom: 1px; color :#FAF8F0;">다크 모드</span>
+                    <button id='work' type="button" name="Hover" style="background-color: #FAF8F0; color: black;">다크 모드</button>
+                </div>
+            </a>
+            <img src="img/f.jpeg" style="width: 40%; bottom: 50px; position:absolute; left: 900px;">
+            <button id='run-button' class='ai-button' style="position: absolute; left: 480px; top: 850px;  border-radius: 10px; height: 40px;">봇 맛보기</button>
+
+
+        </div>
+    </div>
+
+    <script src="js/animframe_polyfill.js "></script>
+    <script src="js/hammer.min.js "></script>
+    <script src="js/keyboard_input_manager.js "></script>
+    <script src="js/html_actuator.js "></script>
+    <script src="js/grid.js "></script>
+    <script src="js/tile.js "></script>
+    <script src="js/ai.js "></script>
+    <script src="js/game_manager.js "></script>
+    <script src="js/application.js "></script>
+
+</body>
+
+</html>
